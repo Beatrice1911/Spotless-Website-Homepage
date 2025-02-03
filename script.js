@@ -25,20 +25,16 @@ form.addEventListener('submit', (e) => {
         errorMsg.innerText = 'Email cannot be empty!';
         errorMsg.style.color = 'red';
         errorMsg.style.fontSize = '18px';
+        errorMsg.style.fontWeight = 'bold';
     } else {
         errorMsg.style.display = 'block';
         errorMsg.innerText = 'Subscribed!';
         errorMsg.style.color = 'navy';
         errorMsg.style.fontSize = '18px';
+        errorMsg.style.fontWeight = 'bold';        
     }
     form.reset();
 });
-
-
-
-
- 
-
 
 
 // document.querySelectorAll('*').forEach(el => {
