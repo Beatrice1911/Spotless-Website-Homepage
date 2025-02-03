@@ -1,7 +1,13 @@
 const faqs = document.querySelectorAll('.faq');
 const menuIcon = document.querySelector(".menu-icon");
 const navLinks = document.querySelector(".nav-links");
+const email = document.getElementById('email');
+const form = document.querySelector('form');
+const errorMsg = document.getElementById('error-msg');
 
+menuIcon.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
 
 faqs.forEach(faq => {
     const question = faq.querySelector('.faq-question');
@@ -12,31 +18,32 @@ faqs.forEach(faq => {
     });
 });
 
-
-menuIcon.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (email.value === '') {
+        errorMsg.style.display = 'block';
+        errorMsg.innerText = 'Email cannot be empty!';
+        errorMsg.style.color = 'red';
+        errorMsg.style.fontSize = '18px';
+    } else {
+        errorMsg.style.display = 'block';
+        errorMsg.innerText = 'Subscribed!';
+        errorMsg.style.color = 'navy';
+        errorMsg.style.fontSize = '18px';
+    }
+    form.reset();
 });
 
-// let faqDropdown = document.querySelector(".faq-question");
-// let i;
-// for (let i = 0; i < faqDropdown.length; i++) {
-//     faqDropdown[i].addEventListener('click', () => {
-//         this.classList.toggle("active");
-//         let dropdown = this.nextElementSibling;
-//         if (dropdown.style.display === "block") {
-//             dropdown.style.display = 'none';
-//         } else {
-//             dropdown.style.display = 'block';
-//         }
-//     });
-    
-// } 
 
 
 
-document.querySelectorAll('*').forEach(el => {
-    if (el.scrollWidth > el.clientWidth) {
-        console.log('Overflowing Element: ', el, 'Width: ', el.scrollWidth, 'Parent Width: ', el.parentNode.clientWidth);
+ 
+
+
+
+// document.querySelectorAll('*').forEach(el => {
+//     if (el.scrollWidth > el.clientWidth) {
+//         console.log('Overflowing Element: ', el, 'Width: ', el.scrollWidth, 'Parent Width: ', el.parentNode.clientWidth);
         
-    }
-})
+//     }
+// })
