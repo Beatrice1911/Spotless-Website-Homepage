@@ -230,7 +230,7 @@ nav{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    margin: 5px 150x;
+    margin: 5px 15px;
     justify-content: center;
     align-items: center;
 }
@@ -241,8 +241,9 @@ nav{
     border-radius: 5px;
     text-align: center;
     font-size: 18px;
-    height: 60vh;
+    min-height: 400px;
     padding: 20px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
 }
 
 .service > h3{
@@ -366,6 +367,7 @@ nav{
 .subscribe h3{
     font-size: 20px;
     margin-bottom: 20px;
+    color: #333;
 }
 
 .subscribe-form{
@@ -469,13 +471,17 @@ footer a:hover{
         right: 0;
     }
 
+    .hero{
+        height: 600px;
+    }
+
     .hero-content h2{
         font-size: 40px;
         margin-top: 40px;
     }
 
     .hero-content p{
-        width: 70%;
+        width: 90%;
     }
 
     .about{
@@ -515,11 +521,11 @@ footer a:hover{
     }
 
     .faq-question{
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .faq-answer{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .subscribe{
